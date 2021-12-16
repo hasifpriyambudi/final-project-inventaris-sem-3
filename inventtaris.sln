@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inventtaris", "inventtaris\inventtaris.csproj", "{FD36433F-7A3B-4169-A80E-361C5ECB5BD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD36433F-7A3B-4169-A80E-361C5ECB5BD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD36433F-7A3B-4169-A80E-361C5ECB5BD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD36433F-7A3B-4169-A80E-361C5ECB5BD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD36433F-7A3B-4169-A80E-361C5ECB5BD8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A7C47BF-389F-462F-8AB4-4C730C3A942E}
+	EndGlobalSection
+EndGlobal
