@@ -22,5 +22,10 @@ namespace inventtaris.view
         {
             InitializeComponent();
         }
+
+        private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

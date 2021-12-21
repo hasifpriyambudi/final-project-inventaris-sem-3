@@ -8,24 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\MIXO\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\hasip\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MIXO\\Downloads\\Hasif\\pEMROGRAMAN LANJUT\\FP\\inventtaris\\inventtaris\\inventtaris.csproj",
+      "projectUniqueName": "C:\\Users\\hasip\\Documents\\Kuliah\\Pemrograman Lanjut\\Inventaris\\final-project-inventaris-sem-3\\inventtaris\\inventtaris.csproj",
       "projectName": "inventtaris",
-      "projectPath": "C:\\Users\\MIXO\\Downloads\\Hasif\\pEMROGRAMAN LANJUT\\FP\\inventtaris\\inventtaris\\inventtaris.csproj",
-      "packagesPath": "C:\\Users\\MIXO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MIXO\\Downloads\\Hasif\\pEMROGRAMAN LANJUT\\FP\\inventtaris\\inventtaris\\obj\\",
+      "projectPath": "C:\\Users\\hasip\\Documents\\Kuliah\\Pemrograman Lanjut\\Inventaris\\final-project-inventaris-sem-3\\inventtaris\\inventtaris.csproj",
+      "packagesPath": "C:\\Users\\hasip\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hasip\\Documents\\Kuliah\\Pemrograman Lanjut\\Inventaris\\final-project-inventaris-sem-3\\inventtaris\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\MIXO\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\hasip\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -68,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

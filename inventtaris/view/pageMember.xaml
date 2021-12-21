@@ -7,8 +7,80 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="pageMember">
-
     <Grid>
-        <Label Content="Ini Halaman member Page"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Data Member" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="142" FontWeight="Bold" FontSize="20"/>
+            <DataGrid Margin="10,10,10,10" AutoGenerateColumns="True" Grid.Row="1"/>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Border ClipToBounds="True" CornerRadius="10" Background="#f3f5f9" Grid.Row="0" Margin="10,58,10,-123" Height="Auto" Width="Auto">
+                <Grid Margin="2" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="110"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Margin="0,5" Content="Nama:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+                        <Label Grid.Row="1" Margin="0,5" Content="Email:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+                        <Label Grid.Row="2" Margin="0,5" Content="Nomor:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+                        <Label Grid.Row="3" Margin="0,5" Content="Alamat:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+                    </Grid>
+
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <TextBox x:Name="idMember" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200" Visibility="Hidden" />
+                        <TextBox x:Name="namaMember" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200" />
+                        <TextBox x:Name="emailMember" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200" />
+                        <TextBox x:Name="nomorMember" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200" />
+                        <TextBox x:Name="alamatMember" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Width="200" Height="30" />
+                        <Grid Grid.Row="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="btnTambah" Grid.Column="0" Content="Tambah" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#0d6efd" Foreground="White" Width="70">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="2"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                            <Button x:Name="btnUpdate" Grid.Column="1" Content="Update" HorizontalAlignment="Right" VerticalAlignment="Center" Background="#fea569" Foreground="White" Width="70" IsEnabled="False">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="2"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
     </Grid>
 </Page>

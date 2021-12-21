@@ -9,6 +9,76 @@
       Title="pagePengembalian">
 
     <Grid>
-        <Label Content="Ini Halaman Pengembalian Page"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Data Pengembalian" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="209" FontWeight="Bold" FontSize="20"/>
+            <DataGrid Margin="10,10,10,10" AutoGenerateColumns="True" Grid.Row="1"/>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Border ClipToBounds="True" CornerRadius="10" Background="#f3f5f9" Grid.Row="0" Margin="10,58,10,-123" Height="Auto" Width="Auto">
+                <Grid Margin="2" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="110"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Margin="0,5" Content="ID Peminjaman:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+                        <Label Grid.Row="1" Margin="0,5" Content="Nama Member:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+                        <Label Grid.Row="2" Margin="0,5" Content="Nama Barang:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+                        <Label Grid.Row="3" Margin="0,5" Content="Jumlah Barang:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+                    </Grid>
+
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <ComboBox x:Name="lisPeminjaman" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Height="20">
+                            <ComboBoxItem>Peminjaman Satu</ComboBoxItem>
+                            <ComboBoxItem>Peminjaman Dua</ComboBoxItem>
+                            <ComboBoxItem>Peminjaman Tiga</ComboBoxItem>
+                            <ComboBoxItem>Peminjaman Empat</ComboBoxItem>
+                        </ComboBox>
+                        <TextBox x:Name="namaPeminjam" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200" IsEnabled="False" Background="#FF7D879C" UseLayoutRounding="True" />
+                        <TextBox x:Name="namaBarang" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200" IsEnabled="False" Background="#FF7D879C" />
+                        <TextBox x:Name="jumlahBarang" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200" IsEnabled="False" Background="#FF7D879C" />
+                        <Grid Grid.Row="4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="btnTambah" Grid.Column="0" Content="Tambah" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#0d6efd" Foreground="White" Width="70">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="2"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
     </Grid>
 </Page>

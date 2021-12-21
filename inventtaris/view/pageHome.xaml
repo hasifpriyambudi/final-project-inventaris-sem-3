@@ -9,6 +9,6 @@
       Title="pageHome">
 
     <Grid>
-        <Label Content="Ini Halaman Home Page"/>
+        
     </Grid>
 </Page>
