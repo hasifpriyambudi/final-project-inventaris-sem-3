@@ -15,14 +15,14 @@ namespace inventtaris.view{
     /// Interaction logic for login.xaml
     /// </summary>
     public partial class login : Window{
+        controller.C_cekLogin cLogin;
         public login(){
             InitializeComponent();
+            cLogin = new controller.C_cekLogin(this);
         }
 
         private void btnLoginProses(object sender, RoutedEventArgs e){
-            Dash dash = new Dash();
-            dash.Show();
-            this.Close();
+            cLogin.login();
         }
     }
 }

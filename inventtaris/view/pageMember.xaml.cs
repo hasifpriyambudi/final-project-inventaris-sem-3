@@ -11,16 +11,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace inventtaris.view
-{
+namespace inventtaris.view{
     /// <summary>
     /// Interaction logic for pageMember.xaml
     /// </summary>
-    public partial class pageMember : Page
-    {
-        public pageMember()
-        {
+    public partial class pageMember : Page{
+
+        controller.c_Member c_Member;
+        public pageMember(){
             InitializeComponent();
+            c_Member = new controller.c_Member(this);
+            c_Member.getData();
+        }
+
+        private void btnTambah(object sender, RoutedEventArgs e){
+            c_Member.prosesTambah();
         }
     }
 }

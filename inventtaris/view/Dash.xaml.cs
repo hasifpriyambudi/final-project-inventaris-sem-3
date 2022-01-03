@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace inventtaris.view{
     /// <summary>
@@ -19,8 +20,7 @@ namespace inventtaris.view{
             InitializeComponent();
         }
 
-        private void Label_MouseDown(object sender, MouseButtonEventArgs e)
-        {
+        private void Label_MouseDown(object sender, MouseButtonEventArgs e){
             FrameMain.Navigate(new view.pageHome());
         }
 

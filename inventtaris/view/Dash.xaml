@@ -11,7 +11,7 @@
             <ColumnDefinition Width="130"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid Background="#4e54c8">
+        <Grid x:Name="sidePanel" HorizontalAlignment="Left" Background="#4e54c8">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="30"/>
@@ -53,7 +53,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Label Content="Hai, Welcome Back" FontSize="14" FontWeight="DemiBold" VerticalContentAlignment="Center"/>
+                <Label Content="Hai, Selamat Datang" FontSize="14" FontWeight="DemiBold" VerticalContentAlignment="Center"/>
             </Grid>
             <Frame x:Name="FrameMain" Grid.Row="1" Margin="10,0,10,0" NavigationUIVisibility="Hidden" Source="pageHome.xaml"/>
         </Grid>

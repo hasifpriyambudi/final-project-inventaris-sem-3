@@ -18,7 +18,9 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Label Content="Data Member" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="142" FontWeight="Bold" FontSize="20"/>
-            <DataGrid Margin="10,10,10,10" AutoGenerateColumns="True" Grid.Row="1"/>
+            <Grid Grid.Row="1">
+                <DataGrid x:Name="dgDataMember" Margin="10,10,10,10" AutoGenerateColumns="True"/>
+            </Grid>
         </Grid>
 
         <Grid Grid.Column="1">
@@ -63,7 +65,7 @@
                                 <ColumnDefinition Width="100"/>
                                 <ColumnDefinition Width="100"/>
                             </Grid.ColumnDefinitions>
-                            <Button x:Name="btnTambah" Grid.Column="0" Content="Tambah" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#0d6efd" Foreground="White" Width="70">
+                            <Button Grid.Column="0" Content="Tambah" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#0d6efd" Foreground="White" Width="70" Click="btnTambah">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="2"/>
