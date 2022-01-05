@@ -21,7 +21,7 @@ namespace inventtaris.model{
         public Boolean cek(){
             bool result;
             DataSet data = new DataSet();
-            data = temp.Select("admin", "user_admin = '" + userAdmin + "' AND password= '" + password + "'");
+            data = temp.Select("admin", "user_admin = '" + userAdmin + "' AND password= '" + password + "' AND status_admin='1'");
             if(data.Tables[0].Rows.Count > 0){
                 result = true;
                 idAdmin = data.Tables[0].Rows[0][0].ToString();

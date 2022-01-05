@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\hasip\Documents\Kuliah\Pemrograman Lanjut\Inventaris\final-project-inventaris-sem-3\inventtaris\App.xaml
-8-1983683352
+9-1736577572
 
-15-1147922538
+161739318801
 193-48345646
-MainWindow.xaml;view\Dash.xaml;view\login.xaml;view\pageBarang.xaml;view\pageHome.xaml;view\pageMember.xaml;view\pagePeminjaman.xaml;view\pagePengembalian.xaml;
+MainWindow.xaml;view\Dash.xaml;view\login.xaml;view\pageAdmin.xaml;view\pageBarang.xaml;view\pageHome.xaml;view\pageMember.xaml;view\pagePeminjaman.xaml;view\pagePengembalian.xaml;
 
-False
+True
 

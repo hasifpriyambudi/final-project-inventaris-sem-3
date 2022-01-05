@@ -46,5 +46,9 @@ namespace inventtaris.view{
             login.Show();
             this.Close();
         }
+
+        private void menuAdmin_MouseDown(object sender, MouseButtonEventArgs e){
+            FrameMain.Navigate(new view.pageAdmin());
+        }
     }
 }
