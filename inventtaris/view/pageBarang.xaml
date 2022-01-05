@@ -18,7 +18,17 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Label Content="Data Barang" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="142" FontWeight="Bold" FontSize="20"/>
-            <DataGrid x:Name="gridBarang" Margin="10,10,10,10" Grid.Row="1"/>
+            <Grid Grid.Row="1">
+                <DataGrid x:Name="dgBarang" Background="White" AutoGenerateColumns="False" SelectionChanged="dgBarang_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID Barang" Binding="{Binding id_barang}" Width="100"/>
+                        <DataGridTextColumn Header="Nama Barang" Binding="{Binding nama_barang}" Width="120"/>
+                        <DataGridTextColumn Header="Jumlah Barang" Binding="{Binding jumlah_barang}" Width="170"/>
+                        <DataGridTextColumn Header="Tanggal Masuk" Binding="{Binding tanggal_masuk}" Width="170"/>
+                        <DataGridTextColumn Header="Nama Admin" Binding="{Binding nama_admin}" Width="120"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
         </Grid>
 
         <Grid Grid.Column="1">
@@ -29,7 +39,7 @@
                 <Grid Margin="2" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="110"/>
-                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="250"/>
                     </Grid.ColumnDefinitions>
                     <Grid>
                         <Grid.RowDefinitions>
@@ -39,6 +49,13 @@
                         </Grid.RowDefinitions>
                         <Label Grid.Row="0" Margin="0,5" Content="Nama Barang:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
                         <Label Grid.Row="1" Margin="0,5" Content="Jumlah Barang:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+                        <Button x:Name="buttonDelete" Grid.Row="4" Content="Hapus" HorizontalAlignment="Right" VerticalAlignment="Center" Background="#e74c3c" Foreground="White" Width="70" Margin="5 0 5 0" IsEnabled="False" Click="buttonDelete_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="2"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
                     </Grid>
 
                     <Grid Grid.Column="1">
@@ -52,17 +69,25 @@
                         <TextBox x:Name="jumlahBarang" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200" />
                         <Grid Grid.Row="2">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="100"/>
-                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="75"/>
+                                <ColumnDefinition Width="75"/>
+                                <ColumnDefinition Width="75"/>
                             </Grid.ColumnDefinitions>
-                            <Button x:Name="btnTambah" Grid.Column="0" Content="Tambah" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#0d6efd" Foreground="White" Width="70">
+                            <Button x:Name="buttonTambah" Grid.Column="0" Content="Tambah" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#0d6efd" Foreground="White" Width="70" Click="btnTambah_Click">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="2"/>
                                     </Style>
                                 </Button.Resources>
                             </Button>
-                            <Button x:Name="btnUpdate" Grid.Column="1" Content="Update" HorizontalAlignment="Right" VerticalAlignment="Center" Background="#fea569" Foreground="White" Width="70" IsEnabled="False">
+                            <Button x:Name="buttonCancel" Grid.Column="1" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#f1c40f" Foreground="White" Width="70" IsEnabled="False" Click="buttonCancel_Click">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="2"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                            <Button x:Name="buttonUpdate" Grid.Column="2" Content="Update" HorizontalAlignment="Right" VerticalAlignment="Center" Background="#2ecc71" Foreground="White" Width="70" IsEnabled="False">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="2"/>

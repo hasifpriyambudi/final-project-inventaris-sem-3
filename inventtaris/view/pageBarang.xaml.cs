@@ -11,16 +11,57 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace inventtaris.view
-{
+namespace inventtaris.view{
     /// <summary>
     /// Interaction logic for pageBarang.xaml
     /// </summary>
-    public partial class pageBarang : Page
-    {
-        public pageBarang()
-        {
+    public partial class pageBarang : Page{
+
+        controller.c_Barang c_Barang;
+        public pageBarang(){
             InitializeComponent();
+            c_Barang = new controller.c_Barang(this);
+            c_Barang.getData();
+        }
+
+        private void btnTambah_Click(object sender, RoutedEventArgs e){
+            c_Barang.prosesTambah();
+        }
+
+        private void dgBarang_SelectionChanged(object sender, SelectionChangedEventArgs e){
+            if (dgBarang.SelectedItem != null){
+                object item = dgBarang.SelectedItem;
+                idBarang.Text = (dgBarang.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
+                namaBarang.Text = (dgBarang.SelectedCells[1].Column.GetCellContent(item) as TextBlock).Text;
+                jumlahBarang.Text = (dgBarang.SelectedCells[2].Column.GetCellContent(item) as TextBlock).Text;
+                // enable button update
+                buttonUpdate.IsEnabled = true;
+                buttonTambah.IsEnabled = false;
+                buttonCancel.IsEnabled = true;
+                buttonDelete.IsEnabled = true;
+            }
+            else
+            {
+                cancel();
+            }
+        }
+
+        private void cancel(){
+            idBarang.Text = "";
+            namaBarang.Text = "";
+            jumlahBarang.Text = "";
+            buttonUpdate.IsEnabled = false;
+            buttonTambah.IsEnabled = true;
+            buttonCancel.IsEnabled = false;
+            buttonDelete.IsEnabled = false;
+        }
+
+        private void buttonDelete_Click(object sender, RoutedEventArgs e){
+
+        }
+
+        private void buttonCancel_Click(object sender, RoutedEventArgs e){
+            cancel();
         }
     }
 }
