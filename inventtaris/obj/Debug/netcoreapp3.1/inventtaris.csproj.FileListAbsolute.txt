@@ -74,3 +74,4 @@ C:\Users\hasip\Documents\Kuliah\Pemrograman Lanjut\Inventaris\final-project-inve
 C:\Users\hasip\Documents\Kuliah\Pemrograman Lanjut\Inventaris\final-project-inventaris-sem-3\inventtaris\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\hasip\Documents\Kuliah\Pemrograman Lanjut\Inventaris\final-project-inventaris-sem-3\inventtaris\obj\Debug\netcoreapp3.1\inventtaris.csproj.CopyComplete
 C:\Users\hasip\Documents\Kuliah\Pemrograman Lanjut\Inventaris\final-project-inventaris-sem-3\inventtaris\obj\Debug\netcoreapp3.1\view\pageAdmin.g.cs
+C:\Users\hasip\Documents\Kuliah\Pemrograman Lanjut\Inventaris\final-project-inventaris-sem-3\inventtaris\obj\Debug\netcoreapp3.1\view\pageAdmin.baml

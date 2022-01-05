@@ -7,6 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="pageAdmin">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -28,7 +29,7 @@
                 <TextBox x:Name="keySearch" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0 0 10 0" TextWrapping="Wrap" Width="140" TextChanged="TextBox_TextChanged"/>
             </Grid>
             <Grid Grid.Row="1">
-                <DataGrid x:Name="dgmember" Background="White" AutoGenerateColumns="False" SelectionChanged="dgmember_SelectionChanged">
+                <DataGrid x:Name="dgadmin" Background="White" AutoGenerateColumns="False" SelectionChanged="dgadmin_SelectionChanged">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ID Admin" Binding="{Binding id_admin}" Width="100"/>
                         <DataGridTextColumn Header="Nama" Binding="{Binding nama_admin}" Width="120"/>
