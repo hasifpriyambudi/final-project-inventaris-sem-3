@@ -115,5 +115,9 @@ namespace inventtaris.model{
             conn.Close();
             return result;
         }
+
+        //public int countData(string tabel, string kondisi){
+        //    result = false;
+        //}
     }
 }

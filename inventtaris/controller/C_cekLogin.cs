@@ -1,4 +1,8 @@
-﻿using System.Windows;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Data;
+using System.Windows;
 
 namespace inventtaris.controller{
     class C_cekLogin{
