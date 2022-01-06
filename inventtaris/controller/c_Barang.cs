@@ -36,5 +36,43 @@ namespace inventtaris.controller{
             DataSet data = modelBarang.getData();
             viewBarang.dgBarang.ItemsSource = data.Tables[0].DefaultView;
         }
+
+        public void updateBarang(){
+            modelBarang.id = viewBarang.idBarang.Text;
+            modelBarang.nama = viewBarang.namaBarang.Text;
+            modelBarang.jumlah = viewBarang.jumlahBarang.Text;
+            bool result = modelBarang.updateBarang();
+            if (result){
+                getData();
+                MessageBox.Show("Data Berhasil Diupdate");
+            }else{
+                MessageBox.Show("Data gagal Diupdate");
+            }
+        }
+
+        public void deleteBarang(){
+            modelBarang.id = viewBarang.idBarang.Text;
+            int checkPeminjamanBarang = modelBarang.checkPinjamBarang();
+            if (checkPeminjamanBarang == 0){
+                bool result = modelBarang.deleteBarang();
+                getData();
+                MessageBox.Show("Barang Berhasil Dihapus");
+            }
+            else{
+                MessageBox.Show("Barang Tidak Bisa Dihapus, Karena Peminjaman Masih Ada");
+            }
+        }
+
+        public void searchBarang(){
+            modelBarang.key = viewBarang.keySearch.Text;
+            DataSet data = modelBarang.searchBarang();
+            viewBarang.dgBarang.ItemsSource = data.Tables[0].DefaultView;
+            totalData();
+        }
+
+        public void totalData(){
+            int totalBarang = modelBarang.totalData();
+            viewBarang.lblTotalData.Content = totalBarang;
+        }
     }
 }

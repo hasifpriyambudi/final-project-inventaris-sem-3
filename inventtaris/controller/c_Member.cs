@@ -64,9 +64,29 @@ namespace inventtaris.controller{
             }
         }
 
+
+        // function untuk mencari data
         public void searchMember(){
-            DataSet data = modelMember.searchMember(viewMember.keySearch.Text);
+            // set variable global key pada model
+            modelMember.key = viewMember.keySearch.Text;
+            
+            // get search data dari modelMember
+            DataSet data = modelMember.searchMember();
+            
+            // setting datagrid dengan data search terbaru
             viewMember.dgmember.ItemsSource = data.Tables[0].DefaultView;
+
+            // menampilkan total data terbaru
+            totalData();
+        }
+
+        // function untuk menampilkan total data
+        public void totalData(){
+            // get total data dari model
+            int totalMember = modelMember.totalData();
+            
+            // menampilkan total data ke view
+            viewMember.lblTotalData.Content = totalMember;
         }
     }
 }

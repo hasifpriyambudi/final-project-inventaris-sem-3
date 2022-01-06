@@ -15,7 +15,8 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -38,6 +39,18 @@
                         <DataGridTextColumn Header="Nama Admin" Binding="{Binding nama_admin}" Width="120"/>
                     </DataGrid.Columns>
                 </DataGrid>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label Content="Total Data:" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Label x:Name="lblTotalData" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+                </Grid>
             </Grid>
         </Grid>
 

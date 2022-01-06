@@ -17,11 +17,18 @@ namespace inventtaris.view{
     /// </summary>
     public partial class pageMember : Page{
 
+        // deklarasi objek
         controller.c_Member c_Member;
+
+        // function yang akan dijalankan saat tampilan dibuka
         public pageMember(){
             InitializeComponent();
+            // inisialisasi controller
             c_Member = new controller.c_Member(this);
+            // get datagrid member
             c_Member.getData();
+            // get total data member
+            c_Member.totalData();
         }
 
         private void btnTambah(object sender, RoutedEventArgs e){
@@ -59,15 +66,7 @@ namespace inventtaris.view{
         }
 
         private void buttonCancel_Click(object sender, RoutedEventArgs e){
-            idMember.Text = "";
-            namaMember.Text = "";
-            emailMember.Text = "";
-            nomorMember.Text = "";
-            alamatMember.Text = "";
-            buttonUpdate.IsEnabled = false;
-            buttonTambah.IsEnabled = true;
-            buttonCancel.IsEnabled = false;
-            buttonDelete.IsEnabled = false;
+            cancel();
         }
 
         private void buttonUpdate_Click(object sender, RoutedEventArgs e){

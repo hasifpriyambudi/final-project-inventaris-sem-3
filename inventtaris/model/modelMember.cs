@@ -15,6 +15,7 @@ namespace inventtaris.model
         public string alamat { get; set; }
         public string status_member { get; set; }
         public string id_admin { get; set; }
+        public string key { get; set; }
 
         public modelMember(){
             temp = new Koneksi();
@@ -41,14 +42,32 @@ namespace inventtaris.model
             return temp.Update("member", data, "id_member=" + id);
         }
 
-        public DataSet searchMember(string key){
+        public DataSet searchMember(){
             DataSet member = new DataSet();
             if (key == ""){
                 member = getData();
             }else{
-                member = temp.SelectData("SELECT a.id_member, a.nama_member, a.email, a.nomor, a.alamat, b.nama_admin FROM member a JOIN admin b ON a.id_admin=b.id_admin WHERE (a.nama_member LIKE '"+key+ "' OR a.email LIKE '%" + key + "%' OR a.nomor LIKE '%" + key + "%' OR a.alamat LIKE '%" + key + "%') AND a.status_member='1'", "admin");
+                member = temp.SelectData("SELECT a.id_member, a.nama_member, a.email, a.nomor, a.alamat, b.nama_admin FROM member a JOIN admin b ON a.id_admin=b.id_admin WHERE (a.nama_member LIKE '"+key+ "' OR a.email LIKE '%" + key + "%' OR a.nomor LIKE '%" + key + "%' OR a.alamat LIKE '%" + key + "%' OR b.nama_admin LIKE '%" + key + "%') AND a.status_member='1'", "admin");
             }
             return member;
+        }
+
+        // model untuk menampilkan total data
+        public int totalData(){
+            // deklarasi variable totalMember int
+            int totalMember;
+            
+            // cek jika public variabel key kosong
+            if (key == ""){
+                // jika kosong, get data dari function getData() dan menghitung row
+                totalMember = getData().Tables[0].Rows.Count;
+            }else{
+                // jika tidak kosong, get data dari function searchMember() dan menghitung row
+                totalMember = searchMember().Tables[0].Rows.Count;
+            }
+
+            // return variabe totalMember
+            return totalMember;
         }
     }
 }

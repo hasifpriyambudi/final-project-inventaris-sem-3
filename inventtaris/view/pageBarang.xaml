@@ -15,9 +15,19 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
-            <Label Content="Data Barang" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="142" FontWeight="Bold" FontSize="20"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Data Barang" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="142" FontWeight="Bold" FontSize="20"/>
+                <Label Content="Cari" Grid.Column="1" HorizontalAlignment="Right" Margin="7,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
+                <TextBox x:Name="keySearch" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0 0 10 0" TextWrapping="Wrap" Width="140" TextChanged="TextBox_TextChanged"/>
+            </Grid>
             <Grid Grid.Row="1">
                 <DataGrid x:Name="dgBarang" Background="White" AutoGenerateColumns="False" SelectionChanged="dgBarang_SelectionChanged">
                     <DataGrid.Columns>
@@ -28,6 +38,18 @@
                         <DataGridTextColumn Header="Nama Admin" Binding="{Binding nama_admin}" Width="120"/>
                     </DataGrid.Columns>
                 </DataGrid>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label Content="Total Data:" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Label x:Name="lblTotalData" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+                </Grid>
             </Grid>
         </Grid>
 
@@ -87,7 +109,7 @@
                                     </Style>
                                 </Button.Resources>
                             </Button>
-                            <Button x:Name="buttonUpdate" Grid.Column="2" Content="Update" HorizontalAlignment="Right" VerticalAlignment="Center" Background="#2ecc71" Foreground="White" Width="70" IsEnabled="False">
+                            <Button x:Name="buttonUpdate" Grid.Column="2" Content="Update" HorizontalAlignment="Right" VerticalAlignment="Center" Background="#2ecc71" Foreground="White" Width="70" IsEnabled="False" Click="buttonUpdate_Click">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="2"/>

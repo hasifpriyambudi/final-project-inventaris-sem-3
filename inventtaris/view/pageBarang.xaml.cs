@@ -22,6 +22,7 @@ namespace inventtaris.view{
             InitializeComponent();
             c_Barang = new controller.c_Barang(this);
             c_Barang.getData();
+            c_Barang.totalData();
         }
 
         private void btnTambah_Click(object sender, RoutedEventArgs e){
@@ -57,11 +58,19 @@ namespace inventtaris.view{
         }
 
         private void buttonDelete_Click(object sender, RoutedEventArgs e){
-
+            c_Barang.deleteBarang();
         }
 
         private void buttonCancel_Click(object sender, RoutedEventArgs e){
             cancel();
+        }
+
+        private void buttonUpdate_Click(object sender, RoutedEventArgs e){
+            c_Barang.updateBarang();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e){
+            c_Barang.searchBarang();
         }
     }
 }
