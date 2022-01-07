@@ -69,5 +69,16 @@ namespace inventtaris.model
             // return variabe totalMember
             return totalMember;
         }
+
+        // check list peminjaman member
+        public int checkPinjamBarang(){
+            DataSet data = new DataSet();
+            data = temp.SelectData("SELECT id_member from peminjaman WHERE id_member='" + id + "' AND status='0'", "peminjaman");
+            if (data.Tables[0].Rows.Count == 0){
+                return 0;
+            }else{
+                return 1;
+            }
+        }
     }
 }

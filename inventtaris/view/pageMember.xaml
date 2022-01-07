@@ -22,9 +22,9 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="70"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="200"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Content="Data Member" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="142" FontWeight="Bold" FontSize="20"/>
+                <Label Grid.Column="0" Content="Data Member" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
                 <Label Content="Cari" Grid.Column="1" HorizontalAlignment="Right" Margin="7,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
                 <TextBox x:Name="keySearch" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0 0 10 0" TextWrapping="Wrap" Width="140" TextChanged="TextBox_TextChanged"/>
             </Grid>
@@ -96,7 +96,7 @@
                         <TextBox x:Name="idMember" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200"  Visibility="Hidden"/>
                         <TextBox x:Name="namaMember" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200"/>
                         <TextBox x:Name="emailMember" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200" />
-                        <TextBox x:Name="nomorMember" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200" />
+                        <TextBox x:Name="nomorMember" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200" PreviewTextInput="nomorMember_PreviewTextInput" />
                         <TextBox x:Name="alamatMember" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200" Height="30" />
                         <Grid Grid.Row="5">
                             <Grid.ColumnDefinitions>

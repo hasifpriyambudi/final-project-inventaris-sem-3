@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace inventtaris.view{
     /// <summary>
@@ -79,6 +80,11 @@ namespace inventtaris.view{
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e){
             c_Member.searchMember();
+        }
+
+        private void nomorMember_PreviewTextInput(object sender, TextCompositionEventArgs e){
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }

@@ -31,7 +31,7 @@
                 <Label Height="30" Grid.Row="2" Content="Barang" Foreground="White" FontSize="12" Padding="10,0,0,0" VerticalContentAlignment="Center"/>
             </DockPanel>
             <DockPanel Grid.Row="3" x:Name="menuPeminjaman" Height="30" MouseDown="menuPeminjaman_MouseDown">
-                <Label Height="30" Grid.Row="3" Content="Peminjamaan" Foreground="White" FontSize="12" Padding="10,0,0,0" VerticalContentAlignment="Center"/>
+                <Label Height="30" Grid.Row="3" Content="Peminjaman" Foreground="White" FontSize="12" Padding="10,0,0,0" VerticalContentAlignment="Center"/>
             </DockPanel>
             <DockPanel Grid.Row="4" x:Name="menuPengembalian" Height="30" MouseDown="menuPengembalian_MouseDown">
                 <Label Height="30" Grid.Row="4" Content="Pengembalian" Foreground="White" FontSize="12" Padding="10,0,0,0" VerticalContentAlignment="Center"/>

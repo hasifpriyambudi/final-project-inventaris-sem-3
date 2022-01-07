@@ -54,12 +54,7 @@
                             <RowDefinition Height="50"/>
                             <RowDefinition Height="50"/>
                         </Grid.RowDefinitions>
-                        <ComboBox x:Name="lisPeminjaman" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Height="20">
-                            <ComboBoxItem>Peminjaman Satu</ComboBoxItem>
-                            <ComboBoxItem>Peminjaman Dua</ComboBoxItem>
-                            <ComboBoxItem>Peminjaman Tiga</ComboBoxItem>
-                            <ComboBoxItem>Peminjaman Empat</ComboBoxItem>
-                        </ComboBox>
+                        <ComboBox x:Name="listPeminjaman" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Height="20"/>
                         <TextBox x:Name="namaPeminjam" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200" IsEnabled="False" Background="#FF7D879C" UseLayoutRounding="True" />
                         <TextBox x:Name="namaBarang" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200" IsEnabled="False" Background="#FF7D879C" />
                         <TextBox x:Name="jumlahBarang" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="200" IsEnabled="False" Background="#FF7D879C" />

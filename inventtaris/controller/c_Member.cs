@@ -55,12 +55,17 @@ namespace inventtaris.controller{
 
         public void deleteMember(){
             modelMember.id = viewMember.idMember.Text;
-            bool result = modelMember.deleteMember();
-            if (result){
-                getData();
-                MessageBox.Show("Member Berhasil DIhapus");
+            int checkPeminjamanBarang = modelMember.checkPinjamBarang();
+            if (checkPeminjamanBarang == 0){
+                bool result = modelMember.deleteMember();
+                if (result){
+                    getData();
+                    MessageBox.Show("Member Berhasil DIhapus");
+                }else{
+                    MessageBox.Show("Data gagal Dihapus");
+                }
             }else{
-                MessageBox.Show("Data gagal Diupdate");
+                MessageBox.Show("Member tidak bisa dihapus karena masih meminjam barang");
             }
         }
 

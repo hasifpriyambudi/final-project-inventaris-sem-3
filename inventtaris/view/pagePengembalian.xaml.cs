@@ -10,17 +10,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
 
-namespace inventtaris.view
-{
+namespace inventtaris.view{
     /// <summary>
     /// Interaction logic for pagePengembalian.xaml
     /// </summary>
-    public partial class pagePengembalian : Page
-    {
-        public pagePengembalian()
-        {
+    public partial class pagePengembalian : Page{
+
+        controller.c_Pengembalian c_Pengembalian;
+        public pagePengembalian(){
             InitializeComponent();
+            // inisialisasi penggunaan controller
+            c_Pengembalian = new controller.c_Pengembalian(this);
+            // get list peminjaman belum dikembalikan
+            c_Pengembalian.listPeminjaman();
         }
     }
 }
